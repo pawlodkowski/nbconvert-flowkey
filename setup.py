@@ -3,7 +3,7 @@ import sys
 
 from setuptools import setup
 from setuptools.command.develop import develop
-from jupyter_packaging import get_data_files, get_version
+from jupyter_packaging import get_data_files
 
 try:
     import jupyter_core.paths as jupyter_core_paths
@@ -42,11 +42,6 @@ class DevelopCmd(develop):
             os.symlink(rel_source, target)
 
         super().run()
-
-# data_files = []
-# for root, dirs, files in os.walk('share'):
-#     root_files = [os.path.join(root, i) for i in files]
-#     data_files.append((root, root_files))
 
 data_files = get_data_files(
         [
