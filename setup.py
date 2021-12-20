@@ -10,7 +10,7 @@ try:
 except ModuleNotFoundError:
     jupyter_core_paths = None
 
-NAME = 'nbconvert-flowkey'
+NAME = 'nbconvert_flowkey'
 HERE = os.path.abspath(os.path.dirname(__file__))
 
 
