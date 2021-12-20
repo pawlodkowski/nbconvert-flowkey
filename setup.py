@@ -67,7 +67,7 @@ setup_args = {
     },
     'entry_points':{
         "nbconvert.exporters": [
-            "html_toc = nbconvert-flowkey:TocExporter",
+            "html_toc=nbconvert-flowkey:TocExporter",
         ]
     }
 }
