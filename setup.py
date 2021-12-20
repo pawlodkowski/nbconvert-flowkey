@@ -58,7 +58,7 @@ setup_args = {
     ],
     'author': 'Paul Wlodkowski',
     'author_email': 'paul@flowkey.com',
-    'url': 'https://github.com/pawlodkowski/nbconvert-flowkey',
+    'url': 'https://github.com/pawlodkowski/nbconvert_flowkey',
     'cmdclass': {
         'develop': DevelopCmd, #https://stackoverflow.com/a/27820612/17242197
     } if jupyter_core_paths else {},
