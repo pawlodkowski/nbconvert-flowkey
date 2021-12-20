@@ -65,6 +65,11 @@ setup_args = {
     'extras_require': {
         "dev": ['jupyter_packaging'],
     },
+    'entry_points':{
+        "nbconvert.exporters": [
+            "html_toc = nbconvert-flowkey:TocExporter",
+        ]
+    }
 }
 
 if __name__ == '__main__':
