@@ -67,6 +67,9 @@ setup_args = {
     'cmdclass': {
         'develop': DevelopCmd, #https://stackoverflow.com/a/27820612/17242197
     } if jupyter_core_paths else {},
+    'extras_require': {
+        "dev": ['jupyter_packaging'],
+    },
 }
 
 if __name__ == '__main__':
