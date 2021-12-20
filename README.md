@@ -51,7 +51,7 @@ HTML export. The [toc2 juptyer extension](https://jupyter-contrib-nbextensions.r
 is very nice, but unfortunately doesn't work with `nbconvert > 6`. Attempts at building my own custom nbconvert
 exporter were not successful, and the efforts to make this HTML template backwards compatible with `nbconvert==5.6.1` are not worth the trouble.
 
-Therefore, for the time being, I built a simple, manual "nax box" button that simply hyperlinks the user back to the 
+Therefore, for the time being, I built a simple, manual "nav box" button that simply hyperlinks the user back to the 
 table of contents at the top of page. The only catch is that in order for it to work, you must create a markdown
 header with an id of "`contents`", e.g.:
 
