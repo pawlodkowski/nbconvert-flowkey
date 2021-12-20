@@ -3,11 +3,15 @@ import sys
 
 from setuptools import setup
 from setuptools.command.develop import develop
+from jupyter_packaging import get_data_files, get_version
 
 try:
     import jupyter_core.paths as jupyter_core_paths
 except ModuleNotFoundError:
     jupyter_core_paths = None
+
+NAME = 'nbconvert-flowkey'
+HERE = os.path.abspath(os.path.dirname(__file__))
 
 
 class DevelopCmd(develop):
@@ -39,13 +43,19 @@ class DevelopCmd(develop):
 
         super().run()
 
-data_files = []
-for root, dirs, files in os.walk('share'):
-    root_files = [os.path.join(root, i) for i in files]
-    data_files.append((root, root_files))
+# data_files = []
+# for root, dirs, files in os.walk('share'):
+#     root_files = [os.path.join(root, i) for i in files]
+#     data_files.append((root, root_files))
+
+data_files = get_data_files(
+        [
+            ("share", str(os.path.join(HERE, "share")), "**"),
+        ]
+    )
 
 setup_args = {
-    'name': 'nbconvert-flowkey',
+    'name': NAME,
     'version': '0.1.0',
     'packages': [],
     'data_files': data_files,
