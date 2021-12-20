@@ -31,7 +31,8 @@ class TocExporter(HTMLExporter):
 
         Note: nbconvert 6.0 changed ``template_path`` to ``template_paths``
         """
-        return super().template_paths+[os.path.join(os.path.dirname(__file__), "templates")]
+        # return super().template_paths+[os.path.join(os.path.dirname(__file__), "templates")]
+        return super()._template_paths() + [os.path.join(os.path.dirname(__file__), "templates")]
 
     def _template_file_default(self):
         """
