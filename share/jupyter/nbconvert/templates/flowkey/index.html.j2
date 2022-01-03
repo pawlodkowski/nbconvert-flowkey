@@ -50,12 +50,19 @@
       opacity: 0.75;
       border-radius: 5px;
     }
-    a.anchor-link {
+    h1 a.anchor-link,
+    h2 a.anchor-link,
+    h3 a.anchor-link,
+    h4 a.anchor-link {
       display: none;
     }
-    a.anchor-link:hover {
-      display:contents;
+    h1:hover a.anchor-link,
+    h2:hover a.anchor-link,
+    h3:hover a.anchor-link,
+    h4:hover a.anchor-link {
+      display: contents;
     }
+
   </style>
 {%- endblock html_head_css -%}
 
