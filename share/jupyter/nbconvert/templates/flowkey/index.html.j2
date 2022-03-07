@@ -82,6 +82,9 @@
       {% include 'flowkey_insights.svg' %}
     </div>
   </div>
+  <div id="timestamp_container" style="display: flex; justify-content: center; align-items: center; font-size:smaller; color: dimgray">
+    <p><i>Report generated at: <span id="datetime"></span></i></p>
+  </div>
   <div style="margin-left: 50px; margin-right: 50px; margin-bottom: 50px">
 {% endblock body_header %}
 
@@ -92,5 +95,11 @@
       ⬆️ Back to Contents
     </div>
   </a>
+  <script>
+    var now = new Date(); 
+    document.getElementById("datetime").innerHTML = '<strong>' +
+    now.toISOString().replace(/T/, ' @ ').replace(/\..+/, '').replace(/\-/g, '.')
+    + ' (UTC)</strong>';
+    </script>
   </body>
 {% endblock body_footer %}
