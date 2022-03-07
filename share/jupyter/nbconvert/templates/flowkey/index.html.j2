@@ -82,8 +82,13 @@
       {% include 'flowkey_insights.svg' %}
     </div>
   </div>
-  <div id="timestamp_container" style="display: flex; justify-content: center; align-items: center; font-size:smaller; color: dimgray">
-    <p><i>Report generated at: <span id="datetime"></span></i></p>
+  <div id="timestamp_container" style="display:flex;
+                                       justify-content:center;
+                                       align-items:center;
+                                       font-size:smaller;
+                                       color:dimgray;
+                                       margin:5px;">
+    <p><i>Report generated at: <span id="datetime" style="font-weight:bold;"></span></i></p>
   </div>
   <div style="margin-left: 50px; margin-right: 50px; margin-bottom: 50px">
 {% endblock body_header %}
