@@ -100,11 +100,10 @@
       ⬆️ Back to Contents
     </div>
   </a>
-  <script>
-    var now = new Date(); 
-    document.getElementById("datetime").innerHTML = '<strong>' +
-    now.toISOString().replace(/T/, ' @ ').replace(/\..+/, '').replace(/\-/g, '.')
-    + ' (UTC)</strong>';
+  {% block javascript %}
+    <script type="text/javascript">
+      {% include "script.js" %}
     </script>
+  {% endblock %}
   </body>
 {% endblock body_footer %}
