@@ -1,3 +1,3 @@
-var now = new Date(); 
-var curTimeStamp = now.toISOString().replace(/T/, ' @ ').replace(/\..+/, '').replace(/\-/g, '.');
-document.getElementById("datetime").innerHTML = '<strong>' + curTimeStamp + ' (UTC)</strong>';
+var timeStamp = document.getElementById('timestamp_container');
+var header = document.getElementById('header');
+header.parentNode.insertBefore(timeStamp, header.nextSibling);

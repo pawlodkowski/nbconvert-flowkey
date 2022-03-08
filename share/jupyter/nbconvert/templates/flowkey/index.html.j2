@@ -20,7 +20,7 @@
       font-weight: bold;
       font-style: italic;
     }
-    .header {
+    #header {
       overflow: hidden;
       background-color: #f1f1f1;
       padding: 20px 10px;
@@ -77,18 +77,10 @@
 
 {% block body_header %}
   <body class="jp-Notebook theme-light" style="padding: 0; margin: 0;">
-  <div class="header">
+  <div id="header">
     <div class="logo-container">
       {% include 'flowkey_insights.svg' %}
     </div>
-  </div>
-  <div id="timestamp_container" style="display:flex;
-                                       justify-content:center;
-                                       align-items:center;
-                                       font-size:smaller;
-                                       color:dimgray;
-                                       margin:5px;">
-    <p><i>Report generated at: <span id="datetime" style="font-weight:bold;"></span></i></p>
   </div>
   <div style="margin-left: 50px; margin-right: 50px; margin-bottom: 50px">
 {% endblock body_header %}
