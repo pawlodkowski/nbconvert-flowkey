@@ -6,7 +6,8 @@ RUN echo "pandas==1.3.2" >> requirements.txt
 
 RUN pip install --trusted-host pypi.python.org -r requirements.txt && \
     pip install nbconvert==6.1.0 && \
-    pip install ipykernel==5.5.5
+    pip install ipykernel==5.5.5 && \
+    pip install ipython_genutils==0.2.0
 
 RUN apt-get update && \
     apt-get upgrade -y && \
