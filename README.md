@@ -53,10 +53,10 @@ exporter were not successful, and the efforts to make this HTML template backwar
 
 Therefore, for the time being, I built a simple, manual "nav box" button that simply hyperlinks the user back to the 
 table of contents at the top of page. The only catch is that in order for it to work, you must create a markdown
-header with an id of "`contents`", e.g.:
+header with an id of "`Contents`", e.g.:
 
 ```markdown
-## Contents<a class="anchor" id="contents"></a>:
+## Contents<a class="anchor" id="Contents"></a>:
 ```
 
 
